@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function Retangulo(base, altura) {
+        this.base = base;
+        this.altura = altura;
+
+        this.calcularArea = function() {
+            return this.base * this.altura;
+        };
+    }
+    const input = prompt("digite os valores de base e altura de um retangulo separado por virgula Ex: (20,30);")
+    const valores = input.split(',');
+    base = parseFloat(valores[0].trim());
+    altura = parseFloat(valores[1].trim());
+    const meuRetangulo = new Retangulo(base, altura);
+    const area = meuRetangulo.calcularArea();
+    alert(`Dimensões do Retângulo: Base = ${meuRetangulo.base}, Altura = ${meuRetangulo.altura}`);
+    alert(`A área calculada é: ${area}`);
+    </script>
+</body>
+</html>
